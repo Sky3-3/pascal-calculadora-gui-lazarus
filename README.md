@@ -36,6 +36,117 @@ begin
   var_auxiliar := StrToInt(lblDisplay.Caption);
   lblDisplay.Caption := '0'; // Inicialización del visor
 end;
+```
+### 2. Version V2 - Para calculadora
+```pascal
+var
+  Form1: TForm1;
+  var_auxiliar: integer;
+implementation
+
+{$R *.lfm}
+
+
+{ TForm1 }
+
+
+procedure TForm1.bnt1Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '1'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt1.Caption);
+end;
+
+procedure TForm1.bnt0Click(Sender: TObject);
+begin
+    lblDisplay.Caption := '0';
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt1.Caption);
+end;
+
+procedure TForm1.bnt2Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '2'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt2.Caption);
+end;
+
+procedure TForm1.bnt3Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '3'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt3.Caption);
+end;
+
+procedure TForm1.bnt4Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '4'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt4.Caption);
+end;
+
+procedure TForm1.bnt5Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '5'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt5.Caption);
+end;
+
+procedure TForm1.bnt6Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '6'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt6.Caption);
+end;
+
+procedure TForm1.bnt7Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '7'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt7.Caption);
+end;
+
+procedure TForm1.bnt8Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '8'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt8.Caption);
+end;
+
+procedure TForm1.bnt9Click(Sender: TObject);
+begin
+   if lblDisplay.Caption = '0' then
+    lblDisplay.Caption := '9'
+   else
+    lblDisplay.Caption := Concat(lblDisplay.Caption, bnt9.Caption);
+end;
+
+procedure TForm1.bntCClick(Sender: TObject);
+begin
+  lblDisplay.Caption:= '0';
+  var_auxiliar:= 0;
+end;
+
+procedure TForm1.bntIgualClick(Sender: TObject);
+begin
+  var_auxiliar:= StrToInt(lblDisplay.Caption) + var_auxiliar;
+  lblDisplay.Caption:= IntToStr(var_auxiliar);
+end;
+
+procedure TForm1.bntSumaClick(Sender: TObject);
+begin
+  var_auxiliar:= StrToInt(lblDisplay.Caption);
+  lblDisplay.Caption:= '0';
+end;
+
+end.      
 
 ```
 
