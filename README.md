@@ -37,7 +37,7 @@ begin
   lblDisplay.Caption := '0'; // Inicialización del visor
 end;
 ```
-### 2. Version V2 - Para calculadora
+### 3. Version V2 - Para calculadora
 ```pascal
 var
   Form1: TForm1;
